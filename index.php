@@ -16,7 +16,7 @@ function getFilesAndFolders($folder) {
     $result = [];
 
     $contents = scandir($folder);
-    $contents = array_diff($contents, array('.', '..', 'index.php'));
+    $contents = array_diff($contents, array('.', '..', 'index.php', '.git'));
 
     foreach ($contents as $item) {
         $path = $folder . '/' . $item;
